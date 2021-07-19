@@ -24,7 +24,6 @@ os.environ['STORAGE'] = storage
 ### Downloading the Lab Files
 
 !wget https://www.cloudera.com/content/dam/www/marketing/tutorials/cdp-using-cli-api-to-automate-access-to-cloudera-data-engineering/tutorial-files.zip
-!mkdir tutorial_files
 !mv tutorial-files.zip /home/cdsw/tutorial_files
 !unzip /home/cdsw/tutorial_files/tutorial-files.zip
   
@@ -54,11 +53,10 @@ with open(r'.cde/config.yaml', 'w') as file:
 
 ### Manually upload the CDE CLI before running the below commands:
 
-#!mkdir /home/cdsw/.local/bin
-#!chmod 777 /home/cdsw/.local/bin
-#!mv cde /home/cdsw/.local/bin
-#!chmod 777 /home/cdsw/.local/bin/cde
-#!rm /home/cdsw/tutorial-files.zip
+!mkdir /home/cdsw/.local/bin
+!chmod 777 /home/cdsw/.local/bin
+!mv cde /home/cdsw/.local/bin
+!chmod 777 /home/cdsw/.local/bin/cde
 
 
 ### Do not run these

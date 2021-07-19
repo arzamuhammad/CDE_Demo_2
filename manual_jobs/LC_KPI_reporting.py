@@ -97,11 +97,11 @@ spark.sql("show databases").show()
 
 spark.sql("show tables").show()
 
-df.write.format('parquet').mode("overwrite").saveAsTable('default.LC_table')
+df.write.format('parquet').mode("overwrite").saveAsTable('default.LC_table_cde_demo')
 
 #Running SQL like queries on the dataframe 
-group_by_grade = spark.sql("SELECT grade, MEAN(loan_amnt) FROM LC_table WHERE grade IS NOT NULL GROUP BY grade ORDER BY grade")
+group_by_grade = spark.sql("SELECT grade, MEAN(loan_amnt) FROM LC_table_cde_demo WHERE grade IS NOT NULL GROUP BY grade ORDER BY grade")
 
 group_by_grade.show()
 
-group_by_subgrade = spark.sql("SELECT sub_grade, MEAN(loan_amnt), MEAN(annual_inc), SUM(is_default) FROM LC_table GROUP BY sub_grade ORDER BY sub_grade")
+group_by_subgrade = spark.sql("SELECT sub_grade, MEAN(loan_amnt), MEAN(annual_inc), SUM(is_default) FROM LC_table_cde_demo GROUP BY sub_grade ORDER BY sub_grade")

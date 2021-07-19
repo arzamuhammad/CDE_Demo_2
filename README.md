@@ -29,14 +29,14 @@ Next, we will create three jobs with the following settings. For each of these, 
 
 Choose type "Spark" and pick the corresponding files from your resource.
 
-It is important that you stick to the following nameing convention. Feel free to choose the remaining job settings as you wish e.g. scheduling options. 
+It is important that you stick to the following naming convention. Feel free to choose the remaining job settings as you wish e.g. scheduling options. 
 
 1. LC_data_exploration:
     - Name: "LC_data_exploration"
     - Application File: "LC_data_exploration.py"
     
 2. LC_KPI_reporting:
-    - Name: "LC_KPI_reporting:
+    - Name: "LC_KPI_reporting":
     - Application File: "LC_KPI_reporting.py"
     
 3. LC_ml_scoring:
@@ -47,6 +47,8 @@ It is important that you stick to the following nameing convention. Feel free to
 
 #### Section 2 - Creating and scheduling an Airflow Job via CDE
 
+NB: You cannot run Section 2 unless you have created the Jobs in Section 1. 
+
 CDE uses Airflow for Job Orchestration. In order to create an Airflow job, go to the "Jobs" page and create one of type "Airflow".
 
 Name the job as you'd like and choose the "LC_airflow_config.py" file. Execute or optionally schedule the job.
@@ -55,7 +57,7 @@ Once it has been created, open the job from the "Jobs" tab and navigate to the "
 
 Next, click on the "Code" icon. This is the Airflow DAG we contained in the "LC_airflow_config.py" file. 
 
-Notice there are two types of operators: CDWOperator and CDEJobRunOperator. You can use both to trigger execution from the CDE and CDW services (with Spark and Hive respectively). More operators will be added soon including the ability to customize these. 
+NB: There are two types of operators: CDWOperator and CDEJobRunOperator. You can use both to trigger execution from the CDE and CDW services (with Spark and Hive respectively). More operators will be added soon including the ability to customize these. 
 
 
 
@@ -63,7 +65,7 @@ Notice there are two types of operators: CDWOperator and CDEJobRunOperator. You 
 
 We will download the CDE CLI into a CML project and schedule CDE jobs from there. 
 
-Please note that you can download the CDE CLI to your local machine and follow the same steps with [this tutorial](https://www.cloudera.com/tutorials/cdp-using-cli-api-to-automate-access-to-cloudera-data-engineering.html) by the Cloudera Marketing Team, which additionally contains an example of the CDE REST API.
+NB: You can download the CDE CLI to your local machine and follow the same steps with [this tutorial](https://www.cloudera.com/tutorials/cdp-using-cli-api-to-automate-access-to-cloudera-data-engineering.html) by the Cloudera Marketing Team, which additionally contains an example of the CDE REST API.
 
 ###### Setup Steps
 

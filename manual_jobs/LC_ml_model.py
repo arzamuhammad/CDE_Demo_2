@@ -17,7 +17,7 @@ spark = SparkSession\
 
 ## Loading data from Spark table we created previously
 
-df = spark.sql("SELECT * FROM default.LC_Table")
+df = spark.sql("SELECT * FROM default.LC_table_cde_demo")
 
 #Creating list of categorical and numeric features
 num_cols = [item[0] for item in df.dtypes if item[1].startswith('in') or item[1].startswith('dou')]
