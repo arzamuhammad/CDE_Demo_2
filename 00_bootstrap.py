@@ -53,10 +53,10 @@ with open(r'.cde/config.yaml', 'w') as file:
 
 ### Manually upload the CDE CLI before running the below commands:
 
-!mkdir /home/cdsw/.local/bin
-!chmod 777 /home/cdsw/.local/bin
-!mv cde /home/cdsw/.local/bin
-!chmod 777 /home/cdsw/.local/bin/cde
+#!mkdir /home/cdsw/.local/bin
+#!chmod 777 /home/cdsw/.local/bin
+#!mv cde /home/cdsw/.local/bin
+#!chmod 777 /home/cdsw/.local/bin/cde
 
 
 ### Do not run these
