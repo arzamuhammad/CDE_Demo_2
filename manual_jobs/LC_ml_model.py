@@ -11,10 +11,10 @@ from pyspark.sql import SparkSession
 spark = SparkSession\
     .builder\
     .appName("PythonSQL")\
-    .config("spark.hadoop.fs.s3a.s3guard.ddb.region","us-east-1")\
-    .config("spark.yarn.access.hadoopFileSystems","s3a://demo-aws-2/")\
+    .config("spark.hadoop.fs.s3a.s3guard.ddb.region","us-east-2")\
+    .config("spark.yarn.access.hadoopFileSystems","s3a://gd01-uat2/")\
     .getOrCreate()
-
+    
 ## Loading data from Spark table we created previously
 
 df = spark.sql("SELECT * FROM default.LC_table_cde_demo")

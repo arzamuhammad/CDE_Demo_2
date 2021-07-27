@@ -6,14 +6,14 @@ from pyspark.sql import functions as F
 spark = SparkSession\
     .builder\
     .appName("DataExploration")\
-    .config("spark.hadoop.fs.s3a.s3guard.ddb.region","us-east-1")\
-    .config("spark.yarn.access.hadoopFileSystems","s3a://demo-aws-2/")\
+    .config("spark.hadoop.fs.s3a.s3guard.ddb.region","us-east-2")\
+    .config("spark.yarn.access.hadoopFileSystems","s3a://gd01-uat2/")\
     .getOrCreate()
 
 ## Creating Spark Dataframe from raw CSV datagov
 
 df = spark.read.option('inferschema','true').csv(
-  "s3a://demo-aws-2/data/LendingClub/LoanStats_2015_subset_071821.csv",
+  "s3a://gd01-uat2/data/LendingClub/LoanStats_2015_subset_071821.csv",
   header=True,
   sep=',',
   nullValue='NA'
