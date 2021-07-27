@@ -72,4 +72,4 @@ predictions = spark.createDataFrame(input_data, ["is_default", "probability"])
 predictions.write.format('parquet').mode("overwrite").saveAsTable('default.LC_model_scoring')
 
 ## Storing Model Pipeline to S3
-pipelineModel.write().overwrite().save("s3a://demo-aws-2/data/LendingClub/pipeline")
+pipelineModel.write().overwrite().save("s3a://gd01-uat2/data/LendingClub/pipeline")
