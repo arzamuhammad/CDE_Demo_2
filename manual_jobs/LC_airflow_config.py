@@ -58,7 +58,7 @@ SELECT * FROM default.LC_model_scoring WHERE probability < 0.3;
 mart_hive_cdw = CDWOperator(
     task_id='dataset-etl-mart-cdw',
     dag=dag,
-    cli_conn_id='LC_customer_vw',
+    cli_conn_id='Default-Hive-Conn-gd01-demo-aws',
     hql=vw_query,
     schema='default',
     ### CDW related args ###
