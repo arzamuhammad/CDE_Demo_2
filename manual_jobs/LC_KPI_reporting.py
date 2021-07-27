@@ -16,7 +16,7 @@ spark = SparkSession\
 ## Creating Spark Dataframe from raw CSV datagov
 
 df = spark.read.option('inferschema','true').csv(
-  "s3a://gd01-uat2/data/LendingClub/LoanStats_2015_subset.csv",
+  "s3a://gd01-uat2/data/LendingClub/LoanStats_2015_subset_071821.csv",
   header=True,
   sep=',',
   nullValue='NA'
