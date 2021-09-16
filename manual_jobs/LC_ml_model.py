@@ -69,7 +69,8 @@ input_data = df_model.rdd.map(lambda x: (x["is_default"], float(x['probability']
 ## Outputting predictions from Logistic Regression
 predictions = spark.createDataFrame(input_data, ["is_default", "probability"])
 
-predictions.write.format('parquet').mode("overwrite").saveAsTable('default.LC_model_scoring')
+## Not needed - Uncomment if you need model predictions in CDW
+#predictions.write.format('parquet').mode("overwrite").saveAsTable('default.LC_model_scoring')
 
 ## Storing Model Pipeline to S3
 pipelineModel.write().overwrite().save("s3a://gd01-uat2/data/LendingClub/pipeline")
