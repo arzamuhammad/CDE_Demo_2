@@ -52,7 +52,7 @@ customer_scoring = CDEJobRunOperator(
 end = DummyOperator(task_id='end', dag=dag)
 
 vw_query = """
-SELECT * FROM default.LC_model_scoring WHERE probability < 0.3;
+SELECT * FROM default.LC_model_scores WHERE probability < 0.3;
 """
 
 mart_hive_cdw = CDWOperator(
