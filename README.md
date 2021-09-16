@@ -84,7 +84,7 @@ If you are working in CML on CDP Demo, the "00_bootstrap.py" script takes care o
 ![alt text](https://github.com/pdefusco/myimages_repo/blob/main/jobs_api_url.png)
 
 3. Launch a CML Session with Workbench Editor.
-  * Run the "00_bootstrap.py" file but only up until line 49 (highlight the lines of code you want to run and then click on "Run" -> "Run Lines" from the top bar)
+  * Run the "00_bootstrap.py" file but only up until line 52 (highlight the lines of code you want to run and then click on "Run" -> "Run Lines" from the top bar)
   * Manually download the CDE CLI for Linux to your local machine from the CDE VPC Cluster Details page.
   
 ![alt_text](https://github.com/pdefusco/myimages_repo/blob/main/download_cde_cli.png)
